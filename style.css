@@ -1,0 +1,273 @@
+* { 
+    margin: 0; 
+    padding: 0;
+}
+html {
+    background-color: #171717;
+    margin: auto;
+    max-width: 100%;
+    overflow-x: hidden;
+    color: white;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
+}
+/* headers fix door section/article font size inherit */
+h1 {
+    font-size: 2.5em;
+    font-weight: bolder;
+}
+h2 {
+    font-size: 2em;
+    font-weight: bolder;
+}
+h3 {
+    font-size: 1.5em;
+    font-weight: bolder;
+}
+h4 {
+    font-size: 1.17em;
+    font-weight: bolder;
+}
+h5 {
+    font-size: 1em;
+    font-weight: bolder;
+}
+h6 {
+    font-size: .83em;
+    font-weight: bolder;
+}
+h1, h2, h3, h4, h5, h6 {
+    display: block;
+    font-weight: 700;
+    line-height: 1.5;
+    margin: 0 0 1em 0;
+    text-align: center;
+}
+/* ===================== Navbar =================== */
+nav {
+    background-color: #333;
+    overflow: hidden;
+}
+nav ul {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+nav li a {
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+nav li a:hover {
+    background-color: #ff000062;
+    color: black;
+}
+  
+nav li a.active {
+    background-color: #04AA6D;
+    color: white;
+}
+/* ===================== Main =================== */
+main {
+    width: 100%;
+    overflow: hidden;
+}
+section {
+    display: flex;
+    justify-content: space-evenly;
+    clear: both;
+    margin: 10px;
+}
+section:nth-of-type(2) {
+    flex-wrap: wrap;
+}
+section:nth-of-type(2) figure {
+    width: 50%;
+}
+article {
+    width: 50%;
+    margin: 10px;
+    text-align: center;
+}
+section:nth-of-type(1) article{
+    padding: 10%;
+}
+aside {
+    width: 50%;
+    margin: 10px;
+}
+aside img {
+    width: 100%;
+}
+section figure img {
+    width: 90%;
+    max-height: 600px
+}
+hr {
+    border: 2px solid rgb(92, 17, 17);
+    border-radius: 5px;
+    margin: 20px;
+}
+a {
+    text-decoration: none;
+    color: dodgerblue;
+}
+button {
+    border: 2px dotted crimson;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px 0px 10px 0px;
+    background: none;
+    color: white;
+}
+button:hover {
+    border: 2px solid crimson;
+    color: white;
+    background-color: maroon;
+    font-weight: bold;
+}
+figure {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+body main section figure article {
+    text-align: center;
+    background: red;
+}
+figcaption {
+    text-align: center;
+    color: lightgray;
+    font-weight: lighter;
+    padding: 1em;
+    width: inherit;
+}
+p {
+    text-align: center;
+    color: lightgray;
+    font-weight: lighter;
+    padding: 1em;
+}
+section:nth-of-type(2) figure img {
+    width:40%;
+}
+header p {
+    font-weight: lighter;
+    color: lightgray;
+    font-style: italic;
+    display: block;
+    margin: 1em 0em 1em 0em;
+}
+strong {
+    font-weight: bold;
+    color:crimson;
+}
+
+footer {
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+}
+/* ================ Work page ================ */
+.work {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 0px;
+}
+body > main > .work > article {
+    width: 25%;
+    height: auto;
+    border-style: outset;
+    padding: 10px;
+    overflow: hidden;
+}
+.work article figure {
+    width: 100%;
+    height: 60%;
+    overflow: hidden;
+    margin: 0em 0em 1em 0em;
+}
+.work article figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+body main .work article > figcaption {
+    width: 100%;
+} 
+ul {
+    list-style: none;
+}
+/* Gallery Page */
+body > main > #gallery {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+    padding: 0 4px;
+  }
+body > main > #gallery > article {
+      -ms-flex: 25%; /* IE10 */
+      flex: 25%;
+      max-width: 25%;
+      padding: 0 4px;
+  }
+body > main > #gallery > article > img {
+      margin-top: 8px;
+      vertical-align: middle;
+      width: 100%;
+  }
+
+/* ============ MEDIA QUERIES ============== */
+  /* Responsive layout - makes a two column-layout instead of four columns */
+  @media screen and (max-width: 800px) {
+    body > main > .work > article {
+      width: 40%;
+      height: auto;
+      border-style: outset;
+      padding: 10px;
+      overflow: hidden;
+    }
+    #gallery article {
+        -ms-flex: 45%;
+        flex: 45%;
+        max-width: 45%;
+    }
+  }
+@media only screen and (max-width: 600px) {
+    section {
+        display: flex;
+        flex-wrap: wrap-reverse;
+    }
+    section:nth-of-type(2) figure {
+        width: 100%;
+    }
+    article {
+        width: 100%;
+        margin: 10px;
+        text-align: center;
+    }
+    aside {
+        width: 100%;
+        margin: 10px;
+    }
+    aside img {
+        width: 100%;
+        max-height: 600px
+    }
+    body > main > .work article {
+        width: 100%;
+        border-style: outset;
+        padding: 10px;
+        overflow: hidden;
+    }
+    /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+    #gallery article {
+        -ms-flex: 100%;
+        flex: 100%;
+        max-width: 100%;
+    }
+  }
